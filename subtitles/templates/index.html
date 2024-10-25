@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <style>
+      :root {
+        --background-color: #f4f4f9;
+        --text-color: #333;
+        --form-background-color: white;
+        --button-background-color: #4caf50;
+        --button-text-color: white;
+        --button-hover-background-color: #45a049;
+      }
+
+      [data-theme="dark"] {
+        --background-color: #333;
+        --text-color: #f4f4f9;
+        --form-background-color: #424242;
+        --button-background-color: #6fa1f2;
+        --button-hover-background-color: #5c8dcf;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      h1 {
+        color: inherit;
+      }
+      form {
+        background: var(--form-background-color);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+      }
+      button,
+      .button {
+        background-color: var(--button-background-color);
+        color: var(--button-text-color);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      button:hover,
+      .button:hover {
+        background-color: var(--button-hover-background-color);
+      }
+      .theme-switch {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .loading {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        gap: 2px;
+      }
+
+      .loading span {
+        color: #333;
+        animation: loading 1.5s infinite;
+      }
+
+      @keyframes loading {
+        0%,
+        100% {
+          opacity: 0.2;
+          transform: translateY(0);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Dark mode for animated text */
+      body.dark-mode .loading span {
+        color: transparent;
+        background: linear-gradient(45deg, #ffdd57, #57a6ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="theme-switch">
+      <button id="dark-mode-button">Switch to Dark Mode</button>
+    </div>
+    <h1>You are Awesome!!!</h1>
+    <div class="loading">
+      <span>L</span>
+      <span>O</span>
+      <span>A</span>
+      <span>D</span>
+      <span>I</span>
+      <span>N</span>
+      <span>G</span>
+    </div>
+    <form method="post" action="{% url 'task1' %}">
+      {% csrf_token %}
+      <button type="submit">Make Paragraph</button>
+    </form>
+    <form method="post" action="{% url 'task2' %}">
+      {% csrf_token %}
+      <button type="submit">CN to EN Translate</button>
+    </form>
+
+    <script>
+      const darkModeButton = document.getElementById("dark-mode-button");
+      darkModeButton.addEventListener("click", () => {
+        const isDarkMode = document.body.classList.contains("dark-mode");
+        if (isDarkMode) {
+          document.body.classList.remove("dark-mode");
+          darkModeButton.textContent = "Switch to Dark Mode";
+          document.body.setAttribute("data-theme", "");
+        } else {
+          document.body.classList.add("dark-mode");
+          darkModeButton.textContent = "Switch to Light Mode";
+          document.body.setAttribute("data-theme", "dark");
+        }
+      });
+    </script>
+  </body>
+</html>

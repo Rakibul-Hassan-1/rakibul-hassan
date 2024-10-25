@@ -49,17 +49,17 @@
     </style>
   </head>
   <body>
-    
     <div class="header">
-      <h1>SRT file to Paragraph</h1>
+      <h1>Chinese To Engilsh Translation</h1>
     </div>
 
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <label for="file">Select file:</label>
+      <marquee style="color: red" for="file"
+        >Please wait, Long files take long time...</marquee
+      >
       <input type="file" id="file" name="file" />
       <button type="submit">Upload</button>
     </form>
-
   </body>
 </html>

@@ -50,13 +50,12 @@
   </head>
   <body>
     <div class="header">
-      <h1>Chinese to English</h1>
+      <h1>SRT to Paragraph Convert.</h1>
     </div>
 
     <form method="post" enctype="multipart/form-data">
-      <marquee style="color: red" for="file"
-        >Please wait, Long files take long time...</marquee
-      >
+      {% csrf_token %}
+      <marquee style="color: red" for="file">Please wait...</marquee>
       <input type="file" name="file" />
       <button type="submit">Upload and Convert</button>
     </form>

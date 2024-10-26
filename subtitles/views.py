@@ -7,23 +7,8 @@ import pysrt
 import tempfile
 import os
 
-from django.shortcuts import render
-
 def index(request):
     return render(request, 'index.html')
-
-from django.http import HttpResponse
-
-def task2(request):
-    form = UploadFileForm(request.POST or None, request.FILES or None)
-    if request.method == 'POST' and form.is_valid():
-        new_file = UploadedFile(file=request.FILES['file'])
-        new_file.save()
-        processed_text = process_srt_file(new_file.file.path)
-        response = HttpResponse(processed_text, content_type='text/plain')
-        response['Content-Disposition'] = 'attachment; filename="processed.txt"'
-        return response
-    return render(request, 'upload.html', {'form': form})
 
 def task1(request):
     form = UploadFileForm(request.POST or None, request.FILES or None)
@@ -49,6 +34,19 @@ def task1(request):
     return render(request, 'file.html', {'form': form})
 
 
+
+def task2(request):
+    form = UploadFileForm(request.POST or None, request.FILES or None)
+    if request.method == 'POST' and form.is_valid():
+        new_file = UploadedFile(file=request.FILES['file'])
+        new_file.save()
+        processed_text = process_srt_file(new_file.file.path)
+        response = HttpResponse(processed_text, content_type='text/plain')
+        response['Content-Disposition'] = 'attachment; filename="processed.txt"'
+        return response
+    return render(request, 'upload.html', {'form': form})
+
+
 def file_upload(request):
     form = UploadFileForm(request.POST or None, request.FILES or None)
     if request.method == 'POST' and form.is_valid():
@@ -59,6 +57,8 @@ def file_upload(request):
         response['Content-Disposition'] = 'attachment; filename="processed.txt"'
         return response
     return render(request, 'upload.html', {'form': form})
+
+
 
 def upload_file(request):
     form = UploadFileForm(request.POST or None, request.FILES or None)

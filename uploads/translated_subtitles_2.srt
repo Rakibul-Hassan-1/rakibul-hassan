@@ -1,0 +1,640 @@
+﻿1
+00:00:06,000 --> 00:00:15,000
+Hello everyone, welcome everyone to learn HCIA WLAN Huawei certified wireless LAN engineer online course.
+
+2
+00:00:15,000 --> 00:00:24,000
+This section mainly introduces the concept of wireless communication, WLAN key technology, 802.11 standard, and WiFi6 technology.
+
+3
+00:00:24,000 --> 00:00:28,000
+In fact, the most important thing is the working mechanism of WLAN.
+
+4
+00:00:28,000 --> 00:00:38,000
+What kind of working mechanism is the wireless network, which allows the normal WLAN network to continue working, which is the focus of our lesson.
+
+5
+00:00:38,000 --> 00:00:42,000
+It can also be said that the focus of the entire HCIA WLAN.
+
+6
+00:00:42,000 --> 00:00:55,000
+If you can master this course, it means that you have started with WLAN technology, and you can basically understand how WiFi technology runs.
+
+7
+00:00:55,000 --> 00:01:11,000
+After studying this course, you will be able to clarify the basic concepts of wireless communication. It can also distinguish the 802.11 protocol, list the WiFi generation, and explain the highlights of WIFI6, telling the key technologies of WLAN.
+
+8
+00:01:11,000 --> 00:01:17,000
+The study of the first section of content is the basic concept of wireless communication.
+
+9
+00:01:17,000 --> 00:01:28,000
+The first is wireless radio waves. Everyone must be clear, wifi, or AP, or 3G, 4G, 5G signals, how it transmits it.
+
+10
+00:01:28,000 --> 00:01:30,000
+In fact, they are transmitted with electromagnetic waves.
+
+11
+00:01:30,000 --> 00:01:37,000
+Radio waves are a type of electromagnetic wave. Here we mainly pay attention to how radio waves are transmitted.
+
+12
+00:01:37,000 --> 00:01:41,000
+Radio waves are a wave, how does that wave transmit?
+
+13
+00:01:41,000 --> 00:01:44,000
+It involves various concepts.
+
+14
+00:01:44,000 --> 00:01:52,000
+The first is the wavelength. What is the wavelength of a wave? Is it fixed? If it is not fixed, how can the wavelength be defined?
+
+15
+00:01:52,000 --> 00:01:56,000
+The second is the cycle, what is the concept of the cycle?
+
+16
+00:01:56,000 --> 00:02:05,000
+When it comes to cycles, we also have a word called frequency. Everyone knows that the frequency of various applications to waves is specified.
+
+17
+00:02:05,000 --> 00:02:12,000
+For example, in WLAN, our rule is that it has a frequency band for you from 2.4G. It is used for free.
+
+18
+00:02:12,000 --> 00:02:17,000
+There are still cycles in that wavelength, how do we define it?
+
+19
+00:02:17,000 --> 00:02:22,000
+Another word is the amplitude, what is the amplitude?
+
+20
+00:02:22,000 --> 00:02:26,000
+It's just that this wave is gentle, or is it steep, right?
+
+21
+00:02:26,000 --> 00:02:37,000
+This is a radio wave. We use various technologies to change the information or parameters in the radio waves to achieve the purpose of using radio wave transmission data.
+
+22
+00:02:37,000 --> 00:02:45,000
+In the specific way, we can make the radio waves that can pass data, and we will see it later.
+
+23
+00:02:45,000 --> 00:02:50,000
+First of all, let's take a look at the frequency and wavelength of radio waves.
+
+24
+00:02:50,000 --> 00:02:54,000
+Frequency, high frequency and low frequency, I believe everyone understands.
+
+25
+00:02:54,000 --> 00:03:01,000
+High frequency is for example, both waves are one second, and how many waves can be passed in a second.
+
+26
+00:03:01,000 --> 00:03:06,000
+If you pass more, such as the picture on the left, it is high frequency.
+
+27
+00:03:06,000 --> 00:03:10,000
+If you pass less, like the picture on the right, it is low frequency.
+
+28
+00:03:10,000 --> 00:03:19,000
+That is to say, within the unit time, the number of times or the number of waves that can be completed, we call it frequency.
+
+29
+00:03:19,000 --> 00:03:25,000
+The second is the wavelength. In fact, we have a formula. This formula is simple.
+
+30
+00:03:25,000 --> 00:03:32,000
+C is equal to λ multiplication with F, C is the speed of light, which is a quantitative, the speed of light cannot change, right?
+
+31
+00:03:32,000 --> 00:03:36,000
+So the longer the wavelength, the smaller the frequency is it?
+
+32
+00:03:36,000 --> 00:03:40,000
+If the frequency is larger, is the wavelength smaller?
+
+33
+00:03:40,000 --> 00:03:43,000
+In other words, these two are the opposite relationship.
+
+34
+00:03:43,000 --> 00:03:48,000
+We now have a concept of 5G technology called millimeter waves.
+
+35
+00:03:48,000 --> 00:03:54,000
+If the wavelength reaches a degree of millimeter, the frequency may be reduced accordingly.
+
+36
+00:03:54,000 --> 00:03:57,000
+What unit is used to express it frequently?
+
+37
+00:03:57,000 --> 00:03:59,000
+The unit of frequency is to use Hertz, everyone should pay attention to this.
+
+38
+00:03:59,000 --> 00:04:07,000
+For example, 2.4g Hertz, G means 1000, everyone must know.
+
+39
+00:04:07,000 --> 00:04:10,000
+Let's take a look at the more common frequencies and bands.
+
+40
+00:04:10,000 --> 00:04:14,000
+First of all, this is a high frequency γ -ray, right?
+
+41
+00:04:14,000 --> 00:04:21,000
+What about the small frequency? With wireless radio waves, the frequency band we usually use is here, which is relatively small.
+
+42
+00:04:21,000 --> 00:04:26,000
+Others include microwave, infrared rays, ultraviolet rays, etc., in fact, they have a certain frequency.
+
+43
+00:04:26,000 --> 00:04:32,000
+Everyone should note that the electromagnetic waves used by WLAN are the radio waves we say.
+
+44
+00:04:32,000 --> 00:04:38,000
+Let's take a look at which different spectrums are divided into.
+
+45
+00:04:38,000 --> 00:04:42,000
+You can take a look. We mainly talk about radio waves in this place.
+
+46
+00:04:42,000 --> 00:04:48,000
+WLAN uses the 5G band in it and the 2.4G Hz frequency band.
+
+47
+00:04:48,000 --> 00:04:52,000
+We classify it into ultra -high -frequency and high -frequency.
+
+48
+00:04:52,000 --> 00:05:00,000
+Like other frequency bands, such as Very High, very high -frequency, high -frequency, their application scenarios are different.
+
+49
+00:05:00,000 --> 00:05:07,000
+For example, high -frequency may be applied to civilian radio, and high -frequency is FM broadcast.
+
+50
+00:05:07,000 --> 00:05:15,000
+We only pay attention to the application scenario of radio waves, that is, the 2.4G Herz band and 5G Hertz frequency band.
+
+51
+00:05:15,000 --> 00:05:20,000
+Everyone should be clear about this place, all of our frequency bands refer to a frequency range.
+
+52
+00:05:20,000 --> 00:05:23,000
+It doesn't mean ultra -high frequency, or a certain frequency.
+
+53
+00:05:23,000 --> 00:05:28,000
+Within this frequency range, I divide it as ultra -high frequency.
+
+54
+00:05:28,000 --> 00:05:32,000
+In that range, I divided it into extremely high frequencies.
+
+55
+00:05:32,000 --> 00:05:36,000
+WIFI technology uses 2.4g Hz frequency band.
+
+56
+00:05:36,000 --> 00:05:44,000
+Its frequency range ranges from 2.4g Hertz to 2.4835g Hertz.
+
+57
+00:05:44,000 --> 00:05:47,000
+This place must be accurate to the last four in the decimal point.
+
+58
+00:05:47,000 --> 00:05:55,000
+Because we will involve the problem of channel division later, we will focus on how the frequency range is used.
+
+59
+00:05:55,000 --> 00:05:58,000
+The second is the 5G Hertz frequency band.
+
+60
+00:05:58,000 --> 00:06:02,000
+The 5G Herz band is divided into two unconnected frequency bands.
+
+61
+00:06:02,000 --> 00:06:09,000
+The first frequency band is 5.15g Hertz to 5.35g Hertz.
+
+62
+00:06:09,000 --> 00:06:14,000
+The second band is from 5.725g Herz to 5.85g Hertz.
+
+63
+00:06:14,000 --> 00:06:20,000
+These two frequency bands belong to the frequency band of industry, science and medicine.
+
+64
+00:06:20,000 --> 00:06:28,000
+ISM frequency bands do not require licenses and fees, as long as they follow a certain launch power.
+
+65
+00:06:28,000 --> 00:06:34,000
+This transmitting power is generally less than 1 watt, which can cause interference to other frequency bands.
+
+66
+00:06:34,000 --> 00:06:39,000
+Let's look down.
+
+67
+00:06:39,000 --> 00:06:43,000
+What is our new concept? It is phase.
+
+68
+00:06:43,000 --> 00:06:51,000
+The phase is a relative number, which describes the relationship between the two frequency waves.
+
+69
+00:06:51,000 --> 00:06:56,000
+In order to measure the phase, the wavelength is divided into 360 copies, each of which is called 1 degree.
+
+70
+00:06:56,000 --> 00:07:00,000
+We take 0 degrees as the start time of wave spread.
+
+71
+00:07:00,000 --> 00:07:09,000
+If one wave starts to spread at 0 degrees, the other wave begins to spread at 90 degrees,
+
+72
+00:07:09,000 --> 00:07:12,000
+It is called 90 degrees of different phases.
+
+73
+00:07:12,000 --> 00:07:22,000
+The spread of waves of the same frequency starts at different times, which will have a great impact on the transmission of electromagnetic waves.
+
+74
+00:07:22,000 --> 00:07:27,000
+Pay attention to this place, because it is all spread in the air, and it is energy.
+
+75
+00:07:27,000 --> 00:07:34,000
+If two wireless signals with the same frequency spread, just at the same time, the phase is the same,
+
+76
+00:07:34,000 --> 00:07:43,000
+Because the frequency is the same and the signal is the same when it is received, the signal will be relatively enhanced.
+
+77
+00:07:43,000 --> 00:07:51,000
+For example, it was originally a form of A. Now that the two signals are superimposed together, it becomes 2A.
+
+78
+00:07:51,000 --> 00:07:53,000
+This is the phase enhancement.
+
+79
+00:07:53,000 --> 00:07:59,000
+In addition, there is a weakened signal. If a signal is like this,
+
+80
+00:07:59,000 --> 00:08:06,000
+The other is the opposite, and the difference is 180 degrees, which is equivalent to weakening this signal.
+
+81
+00:08:06,000 --> 00:08:13,000
+In the process of equipment development, the corresponding technology should be used to avoid weakening the signal caused by phase.
+
+82
+00:08:13,000 --> 00:08:22,000
+This is some of the specific basic concepts, wavelengths, frequency, phase, and amplitude.
+
+83
+00:08:22,000 --> 00:08:27,000
+Next, let's take a look at the process of wireless communication.
+
+84
+00:08:27,000 --> 00:08:34,000
+First of all, in the process of signal from one end to the other end, the source of the letter is our sending equipment.
+
+85
+00:08:34,000 --> 00:08:37,000
+Funny is our contact device.
+
+86
+00:08:37,000 --> 00:08:41,000
+For example, I want to send a word now, hello world,
+
+87
+00:08:41,000 --> 00:08:45,000
+The computer is binary. It is not clear that the Hello world you said is.
+
+88
+00:08:45,000 --> 00:08:51,000
+Therefore, we need a certain measure to change, and we need to take a letter source code.
+
+89
+00:08:51,000 --> 00:08:55,000
+Convert to a digital signal, first convert it into a digital signal,
+
+90
+00:08:55,000 --> 00:09:02,000
+Then pass the channel code and modulation to convert it to radio waves and launch.
+
+91
+00:09:02,000 --> 00:09:06,000
+It is sent to our receiving equipment through channels.
+
+92
+00:09:06,000 --> 00:09:09,000
+What is the channel? We mentioned the frequency earlier,
+
+93
+00:09:09,000 --> 00:09:16,000
+For example, 2.4GHz, the frequency range is quite large, and the signals of various frequencies can go.
+
+94
+00:09:16,000 --> 00:09:21,000
+It's like a road, for example, 20 meters wide. If you don't make a plan,
+
+95
+00:09:21,000 --> 00:09:26,000
+Everyone will go blindly, and the efficiency will be very low, so we have to divide the lane,
+
+96
+00:09:26,000 --> 00:09:30,000
+Everyone walks on their own lane, and they will not string to other lanes.
+
+97
+00:09:30,000 --> 00:09:38,000
+The same is true for channels, for example, I give it a number 1234567,
+
+98
+00:09:38,000 --> 00:09:42,000
+You can only walk in Channel 1. At this time, it is the concept of the channel.
+
+99
+00:09:42,000 --> 00:09:49,000
+Divide the frequency into different channels, and send the signal to the receiving device through the channel.
+
+100
+00:09:49,000 --> 00:09:56,000
+In this process, there are no pipelines in the wireless network, and there are no network cable ports.
+
+101
+00:09:56,000 --> 00:10:01,000
+So in the wireless, the interface of the receiving signal is called the empty mouth, which is not visible.
+
+102
+00:10:01,000 --> 00:10:07,000
+Then I will make the information you passed over to a demodulation decoding,
+
+103
+00:10:07,000 --> 00:10:13,000
+After the decoding decoding, the receiving device is sent to us. This is a normal wireless communication process.
+
+104
+00:10:13,000 --> 00:10:17,000
+Let's look at how the encoding is done,
+
+105
+00:10:17,000 --> 00:10:21,000
+Code is divided into Xinyuan Code and channel coding,
+
+106
+00:10:21,000 --> 00:10:26,000
+The source code is actually transforming the original signal into a digital signal.
+
+107
+00:10:26,000 --> 00:10:30,000
+Compress it, by converting text into a digital signal,
+
+108
+00:10:30,000 --> 00:10:35,000
+Then coded, what is the channel coding?
+
+109
+00:10:35,000 --> 00:10:41,000
+It is the technology of information correction detection to improve the success rate of channel transmission.
+
+110
+00:10:41,000 --> 00:10:43,000
+Everyone should be clear about this place,
+
+111
+00:10:43,000 --> 00:10:51,000
+The introduction of channel coding can restore the maximum degree of recovery information on the receiving device and reduce the code rate.
+
+112
+00:10:51,000 --> 00:10:55,000
+For example, many signals will send it to the residence, right?
+
+113
+00:10:55,000 --> 00:10:58,000
+So how does it come from where each signal comes from?
+
+114
+00:10:58,000 --> 00:11:03,000
+So we have to do this channel coding to ensure channel transmission,
+
+115
+00:11:03,000 --> 00:11:06,000
+But in order to effectively transmit the text,
+
+116
+00:11:06,000 --> 00:11:08,000
+We have to add a lot of mechanisms here,
+
+117
+00:11:08,000 --> 00:11:12,000
+In other words, the channel coding it will bring you a burden,
+
+118
+00:11:12,000 --> 00:11:14,000
+So the efficiency of transmission will be reduced,
+
+119
+00:11:14,000 --> 00:11:19,000
+This is what we call coding technology,
+
+120
+00:11:19,000 --> 00:11:21,000
+So what is the modulation?
+
+121
+00:11:21,000 --> 00:11:24,000
+First of all, our digital signal is like this,
+
+122
+00:11:24,000 --> 00:11:28,000
+The modulation is to convert the digital signal to wave,
+
+123
+00:11:28,000 --> 00:11:31,000
+Ordinary sine waves have no information,
+
+124
+00:11:31,000 --> 00:11:35,000
+And if you want to transmit information, you have to make some changes,
+
+125
+00:11:35,000 --> 00:11:37,000
+This is necessary to use the modulation technology,
+
+126
+00:11:37,000 --> 00:11:39,000
+It is divided into three different ways,
+
+127
+00:11:39,000 --> 00:11:41,000
+The first is the adjustment,
+
+128
+00:11:41,000 --> 00:11:43,000
+For example, it was A,,,
+
+129
+00:11:43,000 --> 00:11:44,000
+It's 0 signal,
+
+130
+00:11:44,000 --> 00:11:46,000
+When I want to express 1,
+
+131
+00:11:46,000 --> 00:11:47,000
+Change to 2A,
+
+132
+00:11:47,000 --> 00:11:48,000
+Just parsing,
+
+133
+00:11:48,000 --> 00:11:51,000
+This is also the process of analysis later,
+
+134
+00:11:51,000 --> 00:11:53,000
+This is the adjustment,
+
+135
+00:11:53,000 --> 00:11:54,000
+What is FM?
+
+136
+00:11:54,000 --> 00:11:55,000
+Very simple,
+
+137
+00:11:55,000 --> 00:11:58,000
+That is the normal frequency,
+
+138
+00:11:58,000 --> 00:12:00,000
+When I want to change, I will slow down the frequency,
+
+139
+00:12:00,000 --> 00:12:02,000
+Or increase the frequency,
+
+140
+00:12:02,000 --> 00:12:06,000
+Originally a cycle can only pass one wave,
+
+141
+00:12:06,000 --> 00:12:08,000
+Two waves are passed now,
+
+142
+00:12:08,000 --> 00:12:11,000
+This place has a message conveyed,
+
+143
+00:12:11,000 --> 00:12:18,000
+So this purpose of transmitting the signal by adjusting the frequency,
+
+144
+00:12:18,000 --> 00:12:19,000
+This is the frequency adjustment,
+
+145
+00:12:19,000 --> 00:12:22,000
+The last one is the appearance,
+
+146
+00:12:22,000 --> 00:12:24,000
+What is the appearance? At different nodes,
+
+147
+00:12:24,000 --> 00:12:26,000
+Maybe the phase is different,
+
+148
+00:12:26,000 --> 00:12:28,000
+Maybe this place is a normal phase,
+
+149
+00:12:28,000 --> 00:12:30,000
+When adjusting,
+
+150
+00:12:30,000 --> 00:12:33,000
+I will give it a 180 degree adjustment,
+
+151
+00:12:33,000 --> 00:12:37,000
+This can also convey the information you want to transmit,
+
+152
+00:12:37,000 --> 00:12:40,000
+We are through these three modulation methods,
+
+153
+00:12:40,000 --> 00:12:43,000
+Pass the signal to the opposite end,
+
+154
+00:12:43,000 --> 00:12:45,000
+If you accept information,
+
+155
+00:12:45,000 --> 00:12:49,000
+You need to analyze the frequency zone signal into a digital signal,
+
+156
+00:12:49,000 --> 00:12:51,000
+Analysis into 0101 form,
+
+157
+00:12:51,000 --> 00:12:53,000
+The digital signal is decoded, and
+
+158
+00:12:53,000 --> 00:12:55,000
+Turn into original data,
+
+159
+00:12:55,000 --> 00:13:00,000
+This is what we call the modulation and demodulation technology,
+
+160
+00:13:00,000 --> 00:13:04,000
+Transfer our data through changes to three different parameters.
+

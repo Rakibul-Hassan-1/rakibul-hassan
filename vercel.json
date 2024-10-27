@@ -4,7 +4,7 @@
     {
       "src": "requirements.txt",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      "config": { "runtime": "python 3.12.6" }
     }
   ],
   "routes": [

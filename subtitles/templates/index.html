@@ -3,139 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>TransLingua</title>
     <style>
       :root {
-        --background-color: #f4f4f9;
-        --text-color: #333;
-        --form-background-color: white;
-        --button-background-color: #4caf50;
-        --button-text-color: white;
-        --button-hover-background-color: #45a049;
-      }
-
-      [data-theme="dark"] {
-        --background-color: #333;
-        --text-color: #f4f4f9;
-        --form-background-color: #424242;
-        --button-background-color: #6fa1f2;
-        --button-hover-background-color: #5c8dcf;
+        --background-color-light: #6a11cb;
+        --background-color-dark: #333;
+        --text-color-light: white;
+        --text-color-dark: #f4f4f9;
+        --button-background-color-light: #ffffff;
+        --button-background-color-dark: #6fa1f2;
+        --button-text-color-light: #2575fc;
+        --button-text-color-dark: white;
+        --bg: #000000;
+        --clr-1: #00c2ff;
+        --clr-2: #33ff8c;
+        --clr-3: #ffc640;
+        --clr-4: #e54cff;
+        --blur: 1rem;
+        --fs: clamp(3rem, 8vw, 7rem);
+        --ls: clamp(-1.75px, -0.25vw, -3.5px);
       }
 
       body {
-        font-family: "Arial", sans-serif;
-        background-color: var(--background-color);
-        color: var(--text-color);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0;
         margin: 0;
-        padding: 20px;
+        background: linear-gradient(
+          to right,
+          var(--background-color-light),
+          #2575fc
+        );
+        height: 100vh;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+        color: var(--text-color-light);
+        transition: background 0.3s, color 0.3s;
+        position: relative;
       }
+
+      .container {
+        width: 80%;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+      }
+
       h1 {
-        color: inherit;
+        margin-bottom: 20px;
+        font-size: var(--fs);
+        font-weight: 800;
+        letter-spacing: var(--ls);
+        position: relative;
+        overflow: hidden;
+        background: var(--bg);
+        margin: 0;
       }
-      form {
-        background: var(--form-background-color);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px;
+
+      .aurora {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        mix-blend-mode: darken;
+        pointer-events: none;
       }
-      button,
-      .button {
-        background-color: var(--button-background-color);
-        color: var(--button-text-color);
+
+      .aurora__item {
+        position: absolute;
+        width: 60vw;
+        height: 60vw;
+        background-color: var(--clr-1);
+        border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+        filter: blur(var(--blur));
+        mix-blend-mode: overlay;
+        animation: aurora-animation 12s ease-in-out infinite;
+      }
+
+      .aurora__item:nth-of-type(1) {
+        background-color: var(--clr-1);
+        top: -50%;
+      }
+
+      .aurora__item:nth-of-type(2) {
+        background-color: var(--clr-3);
+        right: 0;
+        top: 0;
+      }
+
+      .aurora__item:nth-of-type(3) {
+        background-color: var(--clr-2);
+        left: 0;
+        bottom: 0;
+      }
+
+      .aurora__item:nth-of-type(4) {
+        background-color: var(--clr-4);
+        right: 0;
+        bottom: -50%;
+      }
+
+      @keyframes aurora-animation {
+        0%,
+        100% {
+          transform: translate(0, 0);
+          border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+        }
+        25% {
+          transform: translate(20%, -20%);
+          border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+        }
+        50% {
+          transform: translate(-20%, 20%);
+          border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+        }
+        75% {
+          transform: translate(-10%, -30%);
+          border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+        }
+      }
+
+      button {
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
+        background-color: var(--button-background-color-light);
+        color: var(--button-text-color-light);
         font-size: 16px;
-        transition: background-color 0.3s;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        margin-top: 10px;
       }
-      button:hover,
-      .button:hover {
-        background-color: var(--button-hover-background-color);
+
+      button:hover {
+        background-color: #2575fc;
+        color: white;
       }
+
       .theme-switch {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 20px;
+        right: 20px;
       }
 
-      .loading {
-        font-size: 24px;
-        font-weight: bold;
-        display: flex;
-        gap: 2px;
-      }
-
-      .loading span {
-        color: #333;
-        animation: loading 1.5s infinite;
-      }
-
-      @keyframes loading {
-        0%,
-        100% {
-          opacity: 0.2;
-          transform: translateY(0);
-        }
-        50% {
-          opacity: 1;
-          transform: translateY(-10px);
-        }
-      }
-
-      /* Dark mode for animated text */
-      body.dark-mode .loading span {
-        color: transparent;
-        background: linear-gradient(45deg, #ffdd57, #57a6ff);
-        -webkit-background-clip: text;
-        background-clip: text;
+      a {
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <div class="theme-switch">
-      <button id="dark-mode-button">Switch to Dark Mode</button>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
-    <h1>You are Awesome!!!</h1>
-    <div class="loading">
-      <span>L</span>
-      <span>O</span>
-      <span>A</span>
-      <span>D</span>
-      <span>I</span>
-      <span>N</span>
-      <span>G</span>
+    <div class="container">
+      <div class="content">
+        <h1 class="title">
+          Let's Build together..
+          <div class="aurora">
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+          </div>
+        </h1>
+      </div>
+      <p>Choose a task to begin:</p>
+      <a href="/task1/"><button>Task 1: CN to EN Translate</button></a>
+      <a href="/task2/"><button>Task 2: Make Paragraph</button></a>
+      <a href="/speech_app/"
+        ><button>Task 3: Speech to Text Comparison</button></a
+      >
     </div>
-    <form method="post" action="{% url 'task1' %}">
-      {% csrf_token %}
-      <button type="submit">CN to EN Translate</button>
-    </form>
-    <form method="post" action="{% url 'task2' %}">
-      {% csrf_token %}
-      <button type="submit">Make Paragraph</button>
-    </form>
-
     <script>
-      const darkModeButton = document.getElementById("dark-mode-button");
-      darkModeButton.addEventListener("click", () => {
-        const isDarkMode = document.body.classList.contains("dark-mode");
-        if (isDarkMode) {
-          document.body.classList.remove("dark-mode");
-          darkModeButton.textContent = "Switch to Dark Mode";
-          document.body.setAttribute("data-theme", "");
-        } else {
-          document.body.classList.add("dark-mode");
-          darkModeButton.textContent = "Switch to Light Mode";
-          document.body.setAttribute("data-theme", "dark");
-        }
-      });
+      function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        body.style.background = isDarkMode
+          ? "linear-gradient(to right, #333, #424242)"
+          : "linear-gradient(to right, #6a11cb, #2575fc)";
+      }
     </script>
   </body>
 </html>

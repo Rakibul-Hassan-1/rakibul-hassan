@@ -10,6 +10,7 @@ import os
 def index(request):
     return render(request, 'index.html')
 
+
 def task1(request):
     form = UploadFileForm(request.POST or None, request.FILES or None)
     if request.method == 'POST' and form.is_valid():
@@ -45,6 +46,8 @@ def task2(request):
         response['Content-Disposition'] = 'attachment; filename="processed.txt"'
         return response
     return render(request, 'upload.html', {'form': form})
+
+
 
 
 def file_upload(request):

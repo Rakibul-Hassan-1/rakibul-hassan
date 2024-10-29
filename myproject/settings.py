@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)6lqc1*+_2(%(9$g*j#g045@a4&a76+b!9ns1gsy$aap#p3b*n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost', "*"]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'subtitles',
-    'speech_app',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +56,11 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'myproject.urls'
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 TEMPLATES = [
     {
@@ -86,17 +90,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': 'BwOsuhKWdgixoimjypWDSzvTSNbgqRLQ',
-#         'HOST': 'postgres.railway.internal',
-#         'PORT': '5432',
-#     }
-# }
 
 
 # Password validation
@@ -138,9 +131,4 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS = ['https://cn2en.onrender.com']
-CSRF_COOKIE_SECURE = True
-
-import os
 

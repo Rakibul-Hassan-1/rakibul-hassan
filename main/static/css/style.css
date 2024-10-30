@@ -51,6 +51,7 @@ body {
     #f7971e 100%
   );
 }
+
 .c-btn {
   margin: 10px;
   padding: 15px 45px;
@@ -69,7 +70,6 @@ body {
   color: #fff;
   text-decoration: none;
 }
-
 /* styling home section starts */
 .home {
   background: linear-gradient(
@@ -93,12 +93,20 @@ body {
   margin-top: 1rem;
   font-size: 1.2rem;
 }
+.h-btn {
+  background: #6f34fe;
+  color: #fff;
+  transform: translateY(-20px);
+  transition-duration: 1s;
+}
+
 .h-btn:hover {
   background: #6f34fe;
   color: #fff;
   transform: translateY(-20px);
   transition-duration: 1s;
 }
+
 .link {
   text-decoration: none;
   font-size: 1.2rem;

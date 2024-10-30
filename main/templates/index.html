@@ -39,7 +39,7 @@
     <!-- for adding animation to website we have use AOS library 
     AOS Library css file cdn link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="icon" href="{% static 'images/rakib_logo.png' %}" />
     <!-- jquery cdn link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
@@ -172,8 +172,15 @@
             <div class="content mt-3">
               <h4>Web Design</h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
+                In the Web Design section of my portfolio, I showcase my
+                expertise in crafting visually appealing and user-friendly
+                websites. My approach integrates aesthetic design with
+                functionality, emphasizing responsive layouts that adapt
+                seamlessly across devices. I utilize tools like Adobe XD and
+                Figma to create prototypes and wireframes that bring my concepts
+                to life. Featured projects include a diverse range of
+                industries, from e-commerce to nonprofit websites, each tailored
+                to meet unique client needs and enhance user engagement.
               </p>
               <a href="" class="link">Read More</a>
             </div>
@@ -191,8 +198,14 @@
             <div class="content mt-3">
               <h4>Web Development</h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
+                The Web Development section demonstrates my ability to transform
+                designs into fully functional websites. As a front-end
+                developer, I specialize in HTML5, CSS3, and JavaScript,
+                leveraging frameworks like React and Vue.js to build interactive
+                experiences. My back-end capabilities include working with
+                Node.js and Python to develop robust server-side logic. This
+                section includes links to live sites and GitHub repositories,
+                providing a transparent view of my coding practices and project
               </p>
               <a href="" class="link">Read More</a>
             </div>
@@ -210,8 +223,14 @@
             <div class="content mt-3">
               <h4>Debugging</h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum neces aibus minima veniam.
+                Debugging is critical to my development process, ensuring that
+                websites operate flawlessly. This section highlights my
+                problem-solving skills, featuring case studies where I
+                identified and resolved complex issues. I use tools like Chrome
+                DevTools and unit testing frameworks to maintain high-quality
+                code standards. By documenting my debugging processes, I offer
+                insights into my systematic approach to troubleshooting and
+                optimizing website performance.
               </p>
               <a href="" class="link">Read More</a>
             </div>
@@ -279,15 +298,17 @@
               Quia voluptas sit aspernatur aut odit aut fugit, sed ruiano
               consequntar magni dolores.
             </p>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              <!-- here download attribute is used for adding download functionality to button  -->
-              <a
-                href="Entry Level Web Developer Resume.pdf"
-                download="SampleCV"
-                style="text-decoration: none; color: #fff"
-                >Download CV</a
-              >
-            </button>
+
+            <!-- here download attribute is used for adding download functionality to button  -->
+            <a
+              href="{% static 'resume/Rakibul Hassan.pdf' %}"
+              download="Rakibul Hassan.pdf"
+              style="text-decoration: none; color: #fff"
+            >
+              <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+                Download Resume
+              </button></a
+            >
           </div>
         </div>
       </div>
@@ -307,7 +328,6 @@
         <button class="filter-item" data-filter="game">Game</button>
         <button class="filter-item" data-filter="webapp">Web App</button>
         <button class="filter-item" data-filter="website">Website</button>
-        <button class="filter-item" data-filter="brand">Brand</button>
       </div>
       <div class="portfolio-body">
         <div class="row justify-content-evenly px-4">
@@ -317,17 +337,24 @@
           >
             <div class="card">
               <img
-                src=" {% static 'images/2048game.png' %}"
+                src="{% static 'images/TransLingua.png' %}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body text-center">
-                <h4 class="card-title">2048 Game</h4>
+                <h4 class="card-title">TransLingua</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                <span class="badge bg-secondary badge-pill">JavaScript</span>
-                <span class="badge bg-secondary badge-pill mb-2">Game</span
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">SQLite3</span>
+                <span class="badge bg-secondary badge-pill">Django</span>
+                <span class="badge bg-secondary badge-pill mb-2">Web App</span
                 ><br />
-                <a href="#" class="link">Read More</a>
+                <span class="badge bg-secondary badge-pill">Translator</span>
+                <span class="badge bg-secondary badge-pill">Converter</span>
+                <span class="badge bg-secondary badge-pill">Comparison</span
+                ><br />
+
+                <a href="#" class="read-more-btn link">Read More</a>
               </div>
             </div>
           </div>
@@ -337,13 +364,16 @@
           >
             <div class="card">
               <img
-                src="{% static 'images/currency-converter.png' %}"
+                src="{% static 'images/team-x_bank.png' %}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body text-center">
-                <h4 class="card-title">Converter App</h4>
+                <h4 class="card-title">Team-X Bank</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">PostgreSQL</span
+                ><span class="badge bg-secondary badge-pill">Django</span><br />
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
                 <span class="badge bg-secondary badge-pill mb-2">Website</span
                 ><br />
@@ -357,17 +387,26 @@
           >
             <div class="card">
               <img
-                src="{% static 'images/dictionary.png' %}"
+                src=" {% static 'images/speech2txt_converter.png' %}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body text-center">
-                <h4 class="card-title">Dictionary</h4>
+                <h4 class="card-title">
+                  Speech To Text Converter & Comparison
+                </h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                <span class="badge bg-secondary badge-pill">JavaScript</span>
-                <span class="badge bg-secondary badge-pill mb-2">WebApp</span
-                ><br />
-                <a href="#" class="read-more-btn link">Read More</a>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">SQLite3</span>
+                <span class="badge bg-secondary badge-pill">Django</span><br />
+                <span class="badge bg-secondary badge-pill mb-2"
+                  >Converter</span
+                >
+                <span class="badge bg-secondary badge-pill mb-2"
+                  >Comparison</span
+                ><span class="badge bg-secondary badge-pill">Web App</span>
+                <br />
+                <a href="#" class="link">Read More</a>
               </div>
             </div>
           </div>
@@ -379,14 +418,17 @@
           >
             <div class="card">
               <img
-                src="{% static 'images/piceditor.png' %}"
+                src="{% static 'images/PH_tube.png' %}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body text-center">
-                <h4 class="card-title">PicEditor App</h4>
+                <h4 class="card-title">PH Tube</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span
+                ><br />
+                <span class="badge bg-secondary badge-pill">Django</span>
                 <span class="badge bg-secondary badge-pill mb-2">App</span
                 ><br />
                 <a href="#" class="read-more-btn link">Read More</a>
@@ -399,15 +441,15 @@
           >
             <div class="card">
               <img
-                src="{% static 'images/tictactoe.png' %}"
+                src="{% static 'images/cal.png' %}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body text-center">
-                <h4 class="card-title">TicTacToe Game</h4>
+                <h4 class="card-title">Calculator</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
                 <span class="badge bg-secondary badge-pill">JavaScript</span>
-                <span class="badge bg-secondary badge-pill mb-2">Game</span
+                <span class="badge bg-secondary badge-pill mb-2">Webs App</span
                 ><br />
                 <a href="#" class="read-more-btn link">Read More</a>
               </div>
@@ -416,14 +458,15 @@
           <div class="post col-md-4 all col-10 mt-3 mt-md-0" data-aos="fade-up">
             <div class="card">
               <img
-                src="{% static 'images/lang-translator.png' %}"
+                src="{% static 'images/srt2tx.png' %}"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body text-center">
-                <h4 class="card-title">Lang Translator</h4>
+                <h4 class="card-title">SRT to Paragraph Converter</h4>
                 <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">Django</span>
                 <span class="badge bg-secondary badge-pill mb-2">Web App</span
                 ><br />
                 <a href="#" class="read-more-btn link">Read More</a>
@@ -542,19 +585,19 @@
         <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
           <div class="card">
             <img
-              src="{% static 'images/2048game.png' %}"
+              src="{% static 'images/speech2txt_converter.png' %}"
               class="card-img-top rounded-4"
               alt="..."
             />
             <div class="card-body px-4">
-              <small>By Pawan Kumavat</small
+              <small>By Rakibul Hassan</small
               ><span class="ms-3">Mar 8,2022</span>
               <h4 class="card-title">
-                <a href="">Quis autem vea eum iure reprehenderit</a>
+                <a href="">Speech To Text Converter</a>
               </h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum nece aibus minima veniam.
+                This is speech to Text converter. Where user can convert speech
+                to text with acuraccy checking and comparison both.
               </p>
               <a
                 href="#"
@@ -569,19 +612,19 @@
         <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
           <div class="card">
             <img
-              src="{% static 'images/currency-converter.png' %}"
+              src="{% static 'images/TransLingua.png' %}"
               class="card-img-top rounded-4"
               alt="..."
             />
             <div class="card-body px-4">
-              <small>By Pawan Kumavat</small
+              <small>By Rakibul Hassan</small
               ><span class="ms-3">Mar 8,2022</span>
               <h4 class="card-title">
-                <a href="">Quis autem vea eum iure reprehenderit</a>
+                <a href="">TransLingua</a>
               </h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum nece aibus minima veniam.
+                A language translator, SRT to Paragraph Converter and Comparison
+                checking Web App.
               </p>
               <a
                 href="#"
@@ -596,19 +639,18 @@
         <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 webapp all">
           <div class="card">
             <img
-              src="{% static 'images/dictionary.png' %}"
+              src="{% static 'images/team-x_bank.png' %}"
               class="card-img-top rounded-4"
               alt="..."
             />
             <div class="card-body px-4">
-              <small>By Pawan Kumavat</small
+              <small>By Rakibul Hassan</small
               ><span class="ms-3">Mar 8,2022</span>
               <h4 class="card-title">
-                <a href="">Quis autem vea eum iure reprehenderit</a>
+                <a href="">Team-x Bank</a>
               </h4>
               <p class="text-muted">
-                Dolor repellendus temporibus autem quibusdam officiis debitis
-                rerum nece aibus minima veniam.
+                Banking with new vision with Team-x Banking.
               </p>
               <a
                 href="#"
@@ -641,17 +683,15 @@
               <div class="modal-body px-4">
                 <div class="img">
                   <img
-                    src="{% static 'images/2048game.png' %}"
+                    src="{% static 'images/speech2txt_converter.png' %}"
                     class="img-fluid"
                     alt=""
                   />
                 </div>
                 <div class="content mt-3">
-                  <small>By Pawan Kumavat</small
-                  ><span class="text-muted ms-2">Mar 8,2022</span>
-                  <h4 class="card-title mt-3">
-                    Quis autem vea eum iure reprehenderit
-                  </h4>
+                  <small>By Rakibul Hassa</small
+                  ><span class="text-muted ms-2">October 8,2024</span>
+                  <h4 class="card-title mt-3">Speech to Text</h4>
                   <div class="social-links mt-4">
                     <button href="" class="rounded-pill github">
                       <i class="bi bi-dribbble"></i>
@@ -664,14 +704,11 @@
                     </button>
                   </div>
                   <p class="text-muted mt-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam tempor eros a tellus auctor, nec suscipit nunc
-                    dignissim. Ut suscipit gravida augue sed elementum. Sed sed
-                    luctus nisl. Donec scelerisque nisi in sodales mattis.
-                    Vestibulum suscipit odio ac enim blandit sollicitudin.
-                    Aliquam ultrices sem quis urna placerat interdum. Etiam
-                    rutrum, quam sagittis tristique mollis, libero arcu
-                    scelerisque erat, eget tincidunt eros diam quis nunc.
+                    Speech to Text Online — Quickly transcribe your audios and
+                    voice notes with Evernote powerful AI tool. Try it now! Get
+                    instant transcriptions of your audio with AI. Organize notes
+                    effortlessly! Find everything fast. Available on all
+                    devices.
                   </p>
                 </div>
               </div>
@@ -738,17 +775,15 @@
               <div class="modal-body px-4">
                 <div class="img">
                   <img
-                    src="{% static 'images/currency-converter.png' %}"
+                    src="{% static 'images/TransLingua.png' %}"
                     class="img-fluid"
                     alt=""
                   />
                 </div>
                 <div class="content mt-3">
-                  <small>By Pawan Kumavat</small
-                  ><span class="text-muted ms-2 ms-md-0">Mar 8,2022</span>
-                  <h4 class="card-title mt-3">
-                    Quis autem vea eum iure reprehenderit
-                  </h4>
+                  <small>By Rakibul Hassan</small
+                  ><span class="text-muted ms-2 ms-md-0">Mar 8,2023</span>
+                  <h4 class="card-title mt-3">TransLingua</h4>
                   <div class="social-links mt-4">
                     <button href="" class="rounded-pill github">
                       <i class="bi bi-dribbble"></i>
@@ -835,17 +870,15 @@
               <div class="modal-body px-4">
                 <div class="img">
                   <img
-                    src="{% static 'images/dictionary.png' %}"
+                    src="{% static 'images/team-x_bank.png' %}"
                     class="img-fluid"
                     alt=""
                   />
                 </div>
                 <div class="content mt-3">
-                  <small>By Pawan Kumavat</small
+                  <small>By Rakibul Hassan</small
                   ><span class="text-muted ms-2 ms-md-0">Mar 8,2022</span>
-                  <h4 class="card-title mt-3">
-                    Quis autem vea eum iure reprehenderit
-                  </h4>
+                  <h4 class="card-title mt-3">Team-x Bank</h4>
                   <div class="social-links mt-4">
                     <button href="" class="rounded-pill github">
                       <i class="bi bi-dribbble"></i>
